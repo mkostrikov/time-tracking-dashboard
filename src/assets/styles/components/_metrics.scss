@@ -1,6 +1,7 @@
 .metrics {
   list-style-type: none;
   display: flex;
+  padding: 2.4rem 0;
 
   &__label:has(&__switch:checked) {
     color: #fff;
@@ -16,7 +17,6 @@
     text-align: center;
     color: var(--metrics-btn-color);
     flex: 1;
-    padding: 2.4rem 0;
   }
 
   @media (hover: hover) {
@@ -35,7 +35,8 @@
     & {
       flex-direction: column;
       align-items: flex-start;
-      padding-inline-start: 3.2rem;
+      padding: 2.6rem 3.2rem 3.2rem;
+      gap: 2.1rem;
     }
   }
 }
