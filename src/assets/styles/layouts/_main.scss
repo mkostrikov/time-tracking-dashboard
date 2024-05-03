@@ -1,0 +1,13 @@
+.main {
+  background-color: var(--main-bg);
+  padding: 8.1rem 2.4rem;
+  display: flex;
+  justify-content: center;
+  min-block-size: 100dvh;
+
+  @media (min-width: 768px) {
+    & {
+      align-items: center;
+    }
+  }
+}

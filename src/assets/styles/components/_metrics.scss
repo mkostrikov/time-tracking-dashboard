@@ -1,0 +1,41 @@
+.metrics {
+  list-style-type: none;
+  display: flex;
+
+  &__label:has(&__switch:checked) {
+    color: #fff;
+  }
+
+  &__label {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--regular-font), sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--metrics-btn-color);
+    flex: 1;
+    padding: 2.4rem 0;
+  }
+
+  @media (hover: hover) {
+    &__label:hover {
+      color: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    &__label:active {
+      color: #fff;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-inline-start: 3.2rem;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Time tracking dashboard")
+        title Time tracking dashboard
+        link(rel="icon" type="image/png" sizes="32x32" href="/src/assets/favicon-32x32.png")
+        link(rel="stylesheet" href="@styles/main.scss")
+        script(defer src="@scripts/main.js")
+
+    body
+        main.main
+            article.dashboard(id="dashboard")
+                h1.sr-only Time tracking dashboard
+                header.dashboard__header
+                    div.user-bar
+                        img.user-bar__avatar(
+                            src="@images/image-jeremy.webp"
+                            alt=""
+                        )
+                        div.user-bar__content
+                            p.user-bar__title Report for
+                            p.user-bar__name Jeremy Robson
+                    div.metrics
+                        label.metrics__label(for="radio-daily" tabindex="0") Daily
+                            input.metrics__switch.sr-only(
+                                type="radio"
+                                name="metric"
+                                value="daily"
+                                id="radio-daily"
+                            )
+                        label.metrics__label(for="radio-weekly" tabindex="0") Weekly
+                            input.metrics__switch.sr-only(
+                                type="radio"
+                                name="metric"
+                                value="weekly"
+                                id="radio-weekly"
+                                checked
+                            )
+                        label.metrics__label(for="radio-monthly" tabindex="0") Monthly
+                            input.metrics__switch.sr-only(
+                                type="radio"
+                                name="metric"
+                                value="monthly"
+                                id="radio-monthly"
+                            )
+                ul.dashboard__list(id="dashboard-list")
